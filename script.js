@@ -1,14 +1,14 @@
 function getComputerChoice() {
-   const random = Math.floor(Math.random() * 3)
+  const random = Math.floor(Math.random() * 3);
   switch(random) {
     case 0:
-      console.log("Rock");
+    return "Rock";
       break;
     case 1:
-      console.log("Scissors");
+    return "Paper";
       break;
     case 2:
-      console.log("Paper");
+    return "Scissor";
       break;
   }
 }
