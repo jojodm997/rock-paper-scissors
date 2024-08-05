@@ -22,10 +22,42 @@ function getHumanChoice(){
 }
 
 function playRound(humanChoice, computerChoice) {
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
+  if(humanChoice === computerChoice) {
+    alert("Tie");
+  } 
+  else if (humanChoice == "scissor") {
+    if (computerChoice == "rock") {
+      alert("Computer won");
+      computerScore++;
+    } else {
+      alert("Human won");
+      humanScore++;
+    }
+  }
+  else if (humanChoice == "paper") {
+    if (computerChoice == "scissors") {
+      alert("Computer won");
+      computerScore++;
+    } else {
+      alert("Human won");
+      humanScore++;
+    }
+  }
+  else if (humanChoice == "rock") {
+    if (computerChoice == "paper") {
+      alert("Computer won");
+      computerScore++;
+    } else {
+      alert("Human won");
+      humanScore++;
+    } 
+  }
   
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+//const humanSelection = getHumanChoice();
+//const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
