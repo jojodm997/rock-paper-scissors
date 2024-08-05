@@ -11,24 +11,22 @@ function getComputerChoice() {
     return "Paper";
       break;
     case 2:
-    return "Scissor";
+    return "Scissors";
       break;
   }
 }
 
 function getHumanChoice(){
-  const input = prompt("Choose between Rock Paper Scissor");
-  alert(`${input}`);
+  const input = prompt("Choose between Rock Paper Scissor").trim().toLowerCase();
+  return input.charAt(0).toUpperCase() + input.slice(1);
 }
 
 function playRound(humanChoice, computerChoice) {
-  const humanSelection = getHumanChoice();
-  const computerSelection = getComputerChoice();
   if(humanChoice === computerChoice) {
     alert("Tie");
   } 
-  else if (humanChoice == "scissor") {
-    if (computerChoice == "rock") {
+  else if (humanChoice == "Scissors") {
+    if (computerChoice == "Rock") {
       alert("Computer won");
       computerScore++;
     } else {
@@ -36,8 +34,8 @@ function playRound(humanChoice, computerChoice) {
       humanScore++;
     }
   }
-  else if (humanChoice == "paper") {
-    if (computerChoice == "scissors") {
+  else if (humanChoice == "Paper") {
+    if (computerChoice == "Scissors") {
       alert("Computer won");
       computerScore++;
     } else {
@@ -45,8 +43,8 @@ function playRound(humanChoice, computerChoice) {
       humanScore++;
     }
   }
-  else if (humanChoice == "rock") {
-    if (computerChoice == "paper") {
+  else if (humanChoice == "Rock") {
+    if (computerChoice == "Paper") {
       alert("Computer won");
       computerScore++;
     } else {
@@ -57,7 +55,9 @@ function playRound(humanChoice, computerChoice) {
   
 }
 
-//const humanSelection = getHumanChoice();
-//const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
+
+alert(`Human score is ${humanScore} and Computer score is ${computerScore}`);
