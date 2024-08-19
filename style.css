@@ -1,0 +1,40 @@
+body {
+  height: 100vh;
+  font-family: Roboto;
+  margin: 0;
+  background: #232529;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.play {
+  font-size: 50px;
+  color: white;
+  margin: 50px;
+}
+
+.button {
+  margin: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 42px;
+}
+
+.block {
+  color: white;
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #e3796a;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
