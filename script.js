@@ -1,68 +1,86 @@
 let humanScore = 0;
 let computerScore = 0;
+let playerSelection = '';
+const games = document.querySelector("#game");
+
+const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
 
 function getComputerChoice() {
   const random = Math.floor(Math.random() * 3);
-  switch(random) {
-    case 0:
+  switch (random) {
+      case 0:
     return "Rock";
-      break;
-    case 1:
+      case 1:
     return "Paper";
-      break;
-    case 2:
+      case 2: 
     return "Scissors";
-      break;
   }
 }
 
 function getHumanChoice(){
-  const input = prompt("Choose between Rock Paper Scissor").trim().toLowerCase();
-  return input.charAt(0).toUpperCase() + input.slice(1);
+  const btns1 = document.querySelector("#btn1");
+  btns1.addEventListener("click", () => {
+    playerSelection = "Rock";
+    playRound(playerSelection, getComputerChoice());
+  });
+  const btn2 = document.querySelector("#btn2");
+  btn2.addEventListener("click", () => {
+    playerSelection = "Paper";
+    playRound(playerSelection, getComputerChoice());
+  });
+  const btn3 = document.querySelector("#btn3");
+  btn3.addEventListener("click", () => {
+    playerSelection = "Scissors";
+    playRound(playerSelection, getComputerChoice());
+  });
 }
 
 function playRound(humanChoice, computerChoice) {
   if(humanChoice === computerChoice) {
-    alert("Tie");
+    games.textContent = "Tie";
   } 
   else if (humanChoice == "Scissors") {
     if (computerChoice == "Rock") {
-      alert("Computer won");
+      games.textContent = "Computer Won, Human Lose";
       computerScore++;
     } else {
-      alert("Human won");
+      games.textContent = "Human won, Computer Lose";
       humanScore++;
     }
   }
   else if (humanChoice == "Paper") {
     if (computerChoice == "Scissors") {
-      alert("Computer won");
+      games.textContent = "Computer won, Human Lose";
       computerScore++;
     } else {
-      alert("Human won");
+      games.textContent = "Human won, Computer lose" ;
       humanScore++;
     }
   }
   else if (humanChoice == "Rock") {
     if (computerChoice == "Paper") {
-      alert("Computer won");
+      games.textContent = "Computer won, Human lose";
       computerScore++;
     } else {
-      alert("Human won");
+      games.textContent = "Human won, Computer lose";
       humanScore++;
     } 
   }
-  
+winner();
 }
 
-function playGame() {
-  for (let i = 0; i < 5; i++) {
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
+
+function winner() {
+  if (humanScore >= 5) {
+    games.textContent = "HUMANITY WON AGAINST A.I YESSSSSSS";
+  } else if (computerScore >= 5) {
+    games.textContent = "A.I WON AGAINST THE HUMANITY NOOOOOOO";
   }
 }
 
-playGame();
-
-alert(`Human score is ${humanScore} and Computer score is ${computerScore}`);
+function deletes() {
+  humanScore = 0;
+  computerScore = 0;
+  games.textContent = "FIGHT !";
+}

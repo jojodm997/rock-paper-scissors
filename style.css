@@ -26,6 +26,11 @@ body {
   gap: 42px;
 }
 
+.games {
+  font-size: 30px;
+  color: white;
+}
+
 .block {
   color: white;
   display: block;
@@ -37,4 +42,21 @@ body {
   cursor: pointer;
   text-align: center;
 }
+
+.below {
+  display: flex;
+}
+
+.blockr {
+  color: white;
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #84a0ef;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
 
