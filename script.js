@@ -1,9 +1,11 @@
 let humanScore = 0;
 let computerScore = 0;
 let playerSelection = '';
+
 const games = document.querySelector("#game");
 
 const computerSelection = getComputerChoice();
+
 const humanSelection = getHumanChoice();
 
 function getComputerChoice() {
@@ -19,8 +21,8 @@ function getComputerChoice() {
 }
 
 function getHumanChoice(){
-  const btns1 = document.querySelector("#btn1");
-  btns1.addEventListener("click", () => {
+  const btn1 = document.querySelector("#btn1");
+  btn1.addEventListener("click", () => {
     playerSelection = "Rock";
     playRound(playerSelection, getComputerChoice());
   });
@@ -82,5 +84,5 @@ function winner() {
 function deletes() {
   humanScore = 0;
   computerScore = 0;
-  games.textContent = "FIGHT !";
+  games.textContent = "FIGHT FOR HUMANITY!";
 }
