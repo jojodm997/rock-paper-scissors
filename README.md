@@ -20,3 +20,4 @@ The player who chooses the winning shape wins the round!
 
     Interactive Gameplay: Play against the computer with an easy-to-use interface.
     Score Tracking: Keeps track of your wins, losses, and ties.
+Github-live: https://jojodm997.github.io/rock-paper-scissors/
