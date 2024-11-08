@@ -60,7 +60,7 @@ function playRound(humanChoice, computerChoice) {
       humanScore++;
     } 
   }
-winner();
+    winner();
 }
 
 function winner() {
