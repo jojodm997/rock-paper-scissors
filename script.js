@@ -22,20 +22,17 @@ function getComputerChoice() {
 
 function getHumanChoice(){
   const btn1 = document.querySelector("#btn1");
-  btn1.addEventListener("click", () => {
-    playerSelection = "Rock";
-    playRound(playerSelection, getComputerChoice());
-  });
+  btn1.onclick = () => {
+    playRound("Rock", getComputerChoice());
+  };
   const btn2 = document.querySelector("#btn2");
-  btn2.addEventListener("click", () => {
-    playerSelection = "Paper";
-    playRound(playerSelection, getComputerChoice());
-  });
+  btn2.onclick = () => {
+    playRound("Paper", getComputerChoice());
+  };
   const btn3 = document.querySelector("#btn3");
-  btn3.addEventListener("click", () => {
-    playerSelection = "Scissors";
-    playRound(playerSelection, getComputerChoice());
-  });
+  btn3.onclick = () => {
+    playRound("Scissors", getComputerChoice());
+  };
 }
 
 function playRound(humanChoice, computerChoice) {
@@ -81,7 +78,7 @@ function winner() {
   }
 }
 
-function deletes() {
+function reset() {
   humanScore = 0;
   computerScore = 0;
   games.textContent = "FIGHT FOR HUMANITY!";
