@@ -2,7 +2,6 @@ let humanScore = 0;
 let computerScore = 0;
 
 const games = document.querySelector("#game");
-const score = document.querySelector("#score");
 
 const computerSelection = getComputerChoice();
 const humanSelection = getHumanChoice();
@@ -29,6 +28,8 @@ function getHumanChoice(){
 }
 
 function playRound(humanChoice, computerChoice) {
+  if(humanScore >= 5 || computerScore >= 5) return;
+
   if(humanChoice === computerChoice) {
     games.textContent = "Tie";
   } 
