@@ -69,7 +69,6 @@ function playRound(humanChoice, computerChoice) {
 winner();
 }
 
-
 function winner() {
   if (humanScore >= 5) 
     games.textContent = "HUMANITY WON AGAINST A.I YESSSSSSS";
