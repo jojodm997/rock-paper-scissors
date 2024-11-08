@@ -1,23 +1,16 @@
 let humanScore = 0;
 let computerScore = 0;
-let playerSelection = '';
 
 const games = document.querySelector("#game");
+const score = document.querySelector("#score");
 
 const computerSelection = getComputerChoice();
-
 const humanSelection = getHumanChoice();
 
 function getComputerChoice() {
   const random = Math.floor(Math.random() * 3);
-  switch (random) {
-      case 0:
-    return "Rock";
-      case 1:
-    return "Paper";
-      case 2: 
-    return "Scissors";
-  }
+  const select = ["Rock", "Paper", "Scissors"];
+  return select[random];
 }
 
 function getHumanChoice(){
