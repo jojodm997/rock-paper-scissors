@@ -71,11 +71,10 @@ winner();
 
 
 function winner() {
-  if (humanScore >= 5) {
+  if (humanScore >= 5) 
     games.textContent = "HUMANITY WON AGAINST A.I YESSSSSSS";
-  } else if (computerScore >= 5) {
+  if (computerScore >= 5) 
     games.textContent = "A.I WON AGAINST THE HUMANITY NOOOOOOO";
-  }
 }
 
 function reset() {
