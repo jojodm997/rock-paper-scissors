@@ -33,32 +33,21 @@ function playRound(humanChoice, computerChoice) {
   if(humanChoice === computerChoice) {
     games.textContent = "Tie";
   } 
-  else if (humanChoice == "Scissors") {
-    if (computerChoice == "Rock") {
-      games.textContent = "Computer Won, Human Lose";
-      computerScore++;
-    } else {
-      games.textContent = "Human won, Computer Lose";
-      humanScore++;
-    }
+  else if (
+    (humanChoice === "Rock" && computerChoice === "Scissors")||
+    (humanChoice === "Scissors" && computerChoice === "Paper")||
+    (humanChoice === "Paper" && computerChoice === "Rock")
+  ) {
+    humanScore++;
+    games.textContent = "Human won, Computer lose";
   }
-  else if (humanChoice == "Paper") {
-    if (computerChoice == "Scissors") {
-      games.textContent = "Computer won, Human Lose";
-      computerScore++;
-    } else {
-      games.textContent = "Human won, Computer lose" ;
-      humanScore++;
-    }
-  }
-  else if (humanChoice == "Rock") {
-    if (computerChoice == "Paper") {
-      games.textContent = "Computer won, Human lose";
-      computerScore++;
-    } else {
-      games.textContent = "Human won, Computer lose";
-      humanScore++;
-    } 
+  else if (
+    (computerChoice === "Rock" && humanChoice === "Scissors")||
+    (computerChoice === "Scissors" && humanChoice === "Paper")||
+    (computerChoice === "Paper" && humanChoice === "Rock" )
+  ) {
+    computerScore++;
+    games.textContent = "Computer won, Human lose";
   }
     winner();
 }
