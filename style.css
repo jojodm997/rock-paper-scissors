@@ -31,7 +31,7 @@ body {
   gap: 42px;
 }
 
-.block {
+button {
   color: #f9f5d7;
   display: block;
   width: 100%;
@@ -43,14 +43,6 @@ body {
   text-align: center;
 }
 
-.blockr {
-  color: #f9f5d7;
-  display: block;
-  width: 100%;
-  border: none;
+.block {
   background-color: #458588;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
 }
