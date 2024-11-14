@@ -1,8 +1,8 @@
 body {
   height: 100vh;
-  font-family: Roboto;
+  font-family: 'Times New Roman';
   margin: 0;
-  background: #232529;
+  background: #fbf1c7;
 }
 
 .container {
@@ -14,8 +14,13 @@ body {
 
 .play {
   font-size: 50px;
-  color: white;
-  margin: 50px;
+  color: #1d2021;
+  margin: 60px;
+}
+
+.games {
+  font-size: 30px;
+  color: #1d2021;
 }
 
 .button {
@@ -26,33 +31,24 @@ body {
   gap: 42px;
 }
 
-.games {
-  font-size: 30px;
-  color: white;
-}
-
 .block {
-  color: white;
+  color: #f9f5d7;
   display: block;
   width: 100%;
   border: none;
-  background-color: #e3796a;
+  background-color: #cc241d;
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
   text-align: center;
 }
 
-.below {
-  display: flex;
-}
-
 .blockr {
-  color: white;
+  color: #f9f5d7;
   display: block;
   width: 100%;
   border: none;
-  background-color: #84a0ef;
+  background-color: #458588;
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
