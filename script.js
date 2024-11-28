@@ -2,6 +2,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 const games = document.querySelector("#game");
+games.textContent = "ROUND 1 FIGHT"
 
 const computerSelection = getComputerChoice();
 const humanSelection = getHumanChoice();
@@ -33,7 +34,7 @@ function playRound(humanChoice, computerChoice) {
   if(humanChoice === computerChoice) {
     games.textContent = "Tie";
   } 
-  else if (
+  if (
     (humanChoice === "Rock" && computerChoice === "Scissors")||
     (humanChoice === "Scissors" && computerChoice === "Paper")||
     (humanChoice === "Paper" && computerChoice === "Rock")
@@ -41,7 +42,7 @@ function playRound(humanChoice, computerChoice) {
     humanScore++;
     games.textContent = "Human won, Computer lose";
   }
-  else if (
+  if (
     (computerChoice === "Rock" && humanChoice === "Scissors")||
     (computerChoice === "Scissors" && humanChoice === "Paper")||
     (computerChoice === "Paper" && humanChoice === "Rock" )
