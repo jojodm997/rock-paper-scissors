@@ -4,6 +4,9 @@ let computerScore = 0;
 const games = document.querySelector("#game");
 games.textContent = "ROUND 1 FIGHT"
 
+const score = document.querySelector("#geme")
+score.textContent = `Human ${humanScore} and Computer ${computerScore}`
+
 const computerSelection = getComputerChoice();
 const humanSelection = getHumanChoice();
 
@@ -29,9 +32,9 @@ function getHumanChoice(){
 }
 
 function playRound(humanChoice, computerChoice) {
-  if(humanScore >= 5 || computerScore >= 5) return;
+  if (humanScore >= 5 || computerScore >= 5) return;
 
-  if(humanChoice === computerChoice) {
+  if (humanChoice === computerChoice) {
     games.textContent = "Tie";
   } 
   if (
@@ -41,6 +44,7 @@ function playRound(humanChoice, computerChoice) {
   ) {
     humanScore++;
     games.textContent = "Human won, Computer lose";
+    updatedScore();
   }
   if (
     (computerChoice === "Rock" && humanChoice === "Scissors")||
@@ -49,6 +53,7 @@ function playRound(humanChoice, computerChoice) {
   ) {
     computerScore++;
     games.textContent = "Computer won, Human lose";
+    updatedScore();
   }
     winner();
 }
@@ -64,4 +69,9 @@ function reset() {
   humanScore = 0;
   computerScore = 0;
   games.textContent = "FIGHT FOR HUMANITY!";
+  updatedScore();
+}
+
+function updatedScore() {
+  score.textContent = `Human ${humanScore} and Computer ${computerScore}`
 }
